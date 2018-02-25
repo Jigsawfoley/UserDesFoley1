@@ -9,7 +9,7 @@ import	org.apache.logging.log4j.Logger;
 /**********************************************************
  * 
  *     Date: 2018
- *     @author des.foley
+ *     @author Des Foley
  *
  * The purpose of this application is to provide an example for the following:
  * - Demonstrates the use of development tools : GIT, MAVEN, Eclipse
@@ -22,23 +22,24 @@ public	class	App
 {
 				public	static	void	main(	String[]	args	)
 				{
-	 	 //	To	view	the	arguments	being	entered
+	 	 //	To view	the	arguments being	entered
 	 	 seeCommandlineInput(args);
 	 	 
-	 	 //	To	instantiate	App	class	based	in	the	parameters	entered	at	the	commandline
+	 	 //	To instantiate App class based in the parameters entered at	the	commandline
 	 	 actionCommandlineInput(args);
 				}
+			
 	 //	DATA
 	 //............................................................
 	 //define	attributes
 				
-	 private	Scanner	someInput;
-	 private	Date	today;
+	 private Scanner someInput;
+	 private Date today;
 	 
-	 //	This	is	added	to	every	class	that	needs	to	log	with	one	change
-	 //	The	getLogger(	)	part	should	contain	the	name	of	the	class	its	in
+	 //	This is	added to every class that needs	to log with	one	change
+	 //	The	getLogger()	part should	contain	the	name of	the	class its in
 	 
-	 private	static	Logger	LOG;
+	 private static	Logger LOG;
 	 //	CONSTRUCTORS
 	 //............................................................
 	 
@@ -46,43 +47,43 @@ public	class	App
 	 {	 	
 	 	 //associate logging with this class so	know the messages that came from objects of this class
 		 
-	 	 LOG	=	LogManager.getLogger(App.class);
+	 	 LOG = LogManager.getLogger(App.class);
 	 	 
 	 	 //test	the	logging
 	 	 testLogOutput();
 	 	 
-	 	 this.someInput	=	new	Scanner(System.in);
+	 	 this.someInput	= new Scanner(System.in);
 	 	 
 	 	 //do something	here
-	 	 System.out.println("	\n	Soon	...	stuff	will	happen	here");	
+	 	 System.out.println("\n	Soon ... stuff will	happen here");	
 	 	 
-	 	 //pause	before	exit	(this	is	only	useful	if	an	error	occurs)
+	 	 //pause before	exit (this is only useful if an	error occurs)
 		System.out.println("\n Press enter to exit the program");
 	 	 this.someInput.nextLine();
 	 	 
-	 	 //close	the	program	without	error
+	 	 //close the program without error
 	 	 System.exit(0);
 	 }
 	 
-	 //	METHODS	used	by	main()	or	debug	methods	-	note	they	are	static	methods
+	 //	METHODS	used by	main() or debug	methods	- note they	are	static methods
 	 //............................................................
 	 
 	 /**
-	 	*	action	the	arguments	presented	at	the	command	line
-	 	*	instantiate	the	App	class	based	on	the	arguments	passed
+	 	*	action	the	arguments presented	at the command line
+	 	*	instantiate	the	App	class based	on the arguments passed
 	 	*/
-	 	private	static void	actionCommandlineInput(	String	args[]	)
+	 	private	static void	actionCommandlineInput( String args[]	)
 	 	{
 	 	 	// no special instantiation	yet	as don't pass args to it
 	 	 	App	anApp = new	App();
 	 	}
 	 	
 	 /**
-	 	*	View	the	arguments	presented	at	the	commandline
-	 	*	This	is	for	debug	and	demo	purposes
+	 	*	View the arguments presented at the commandline
+	 	*	This is	for	debug and demo purposes
 	 	*/
 	 	
-	 	private	static	void	seeCommandlineInput(	String	args[]	)
+	 	private	static void seeCommandlineInput( String	args[]	)
 	 	{	
 	 	 if	(args.length ==	0)
 								{
@@ -90,14 +91,14 @@ public	class	App
 								}
 	 	 else
 	 	 {
-	 	 	 //	display	the	command	line		entered	
+	 	 	 //	display	the	command	line entered	
 	 	 	 for(int i	= 0; i < args.length; i++)	
 	 	 	 {
 	 			System.out.println(args[i]);
 	 								}
 	 	 }
 	 	}//EOM
-	 /**
+	    /**
 	 	* Test the Log4J2 logging
 	 	*/
 	 	private	static void	testLogOutput()
